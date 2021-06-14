@@ -1,6 +1,16 @@
 # docker-react
 
+## DEV
+
+```sh
+docker-compose up -d --build
 ```
-docker build -f Dockerfile.dev -t tictactoe .
-docker run --rm -p 3000:3000 -v $(pwd)/my-app:/app tictactoe
+
+## PROD
+
+```sh 
+docker build . -t tictactoe
+docker run -p 8080:80 tictactoe
 ```
+
+The app is then live at http://localhost:8080
